@@ -83,6 +83,64 @@ ul {
   background-color: transparent;
   color: var(--color-yellow);
 }
+.team-section {
+  background-color: var(--color-blue);
+  overflow: hidden;
+}
+.team-container {
+  position: relative;
+  padding-block: clamp(87px, 13.67vw, 160px) clamp(80px, 18.21vw, 213px);
+  gap: 53px;
+}
+.team-image img {
+  width: clamp(344px, 37.94vw, 444px);
+  height: clamp(318px, 33.84vw, 396px);
+}
+.team-content {
+  flex-basis: 470px;
+  color: var(--color-white);
+  position: relative;
+  z-index: 2;
+}
+.team-content h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.team-content h3 {
+  margin-top: 18px;
+  font-size: clamp(40px, 4.79vw, 56px);
+  line-height: clamp(48px, 5.47vw, 64px);
+}
+.team-content p {
+  margin-block: 23px 32px;
+}
+.bubble-left-bottom,
+.bubble-center-bottom {
+  position: absolute;
+  border-radius: 50%;
+}
+.bubble-left-bottom {
+  width: 323px;
+  height: 323px;
+  left: -119px;
+  bottom: -122px;
+  background-image: linear-gradient(
+    224.72deg,
+    var(--color-blue) -0.998%,
+    var(--color-purple) 100.505%
+  );
+}
+.bubble-center-bottom {
+  width: 140px;
+  height: 140px;
+  left: 50%;
+  bottom: -90px;
+  background-image: linear-gradient(
+    224.72deg,
+    var(--color-blue) -0.998%,
+    var(--color-purple) 100.505%
+  );
+}
 .offices-section {
   padding-top: clamp(54px, 6.07vw, 71px);
 }
@@ -131,8 +189,8 @@ ul {
 }
 .partners-section ul img {
   opacity: 0.5;
-  transition: opacity var(--transition-duration) var(--transition-timing),
-    transform var(--transition-duration) var(--transition-timing);
+  transition: opacity var(--transition-speed) var(--transition-ease),
+    transform var(--transition-speed) var(--transition-ease);
 }
 .partners-section ul img:hover {
   transform: scale(1.1);
@@ -306,7 +364,24 @@ ul {
     flex-grow: 1;
   }
 }
-@media (max-width: 899px) {
+@media (width < 899px) {
+  .team-container{
+    justify-content: center;
+  }
+  .team-content{
+    flex-grow: 1;
+  }
+  .team-image img {
+    width: 100%;
+    height: auto;
+  }
+  .team-container .bubble-left-bottom {
+    bottom: -210px;
+  }
+  .team-container .bubble-center-bottom {
+    bottom: -98px;
+    left: 80%;
+  }
   .footer-sub,
   .footer-nav {
     flex-direction: column;
