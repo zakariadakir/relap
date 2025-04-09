@@ -116,20 +116,20 @@ main {
   position: relative;
   z-index: 10;
 }
-.hero-content article {
+.hero-content  {
   color: var(--color-white);
   max-width: 336px;
 }
-.hero-content article h1 {
+.hero-content  h1 {
   font-size: clamp(56px, 6.15vw, 72px);
   line-height: clamp(64px, 6.15vw, 72px);
 }
-.hero-content article p {
+.hero-content  p {
   font-weight: 600;
   line-height: 24px;
   margin-block: 26px 34px;
 }
-.hero-content article .button:hover {
+.hero-content  .button:hover {
   color: var(--color-white);
 }
 .hero-socials {
@@ -646,7 +646,7 @@ main {
     background-size: 539px;
     background-position: center 293px;
   }
-  .hero-content article {
+  .hero-content {
     max-width: 100%;
   }
   .hero-container .hero-socials{
