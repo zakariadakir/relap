@@ -83,6 +83,96 @@ ul {
   background-color: transparent;
   color: var(--color-yellow);
 }
+.features-section {
+  padding-block: 71px;
+  position: relative;
+}
+.features-section h2 {
+  color: var(--color-gray);
+  font-size: clamp(40px, 4.79vw, 56px);
+}
+.features-section > p {
+  max-width: 570px;
+  margin: 23px auto 32px;
+}
+.features-section .wrapper {
+  gap: 40px 30px;
+}
+.features-section .wrapper article {
+  flex: 1 0 370px;
+  padding: 30px 32px 24px;
+  border-radius: 3px;
+  box-shadow: 16px 16px 48px 0px #0000001a;
+  background-color: var(--color-white);
+  transition: scale var(--transition-speed) var(--transition-ease),
+    box-shadow var(--transition-speed) var(--transition-ease);
+}
+.features-section .wrapper article:hover {
+  scale: 1.04;
+  box-shadow: 16px 16px 48px 0px #00000043;
+}
+.features-section .wrapper article h3 {
+  color: var(--color-gray);
+  width: fit-content;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 auto 19px;
+  position: relative;
+  z-index: 1;
+}
+.features-section .wrapper article h3::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 4px;
+  background-color: var(--color-purple);
+  transition: width var(--transition-speed) var(--transition-ease);
+}
+.features-section .wrapper article:hover h3::after {
+  width: 100%;
+}
+.features-section .wrapper article h3::before {
+  display: block;
+  margin: 0 auto 13px;
+}
+.features-section .wrapper article:nth-child(1) h3::before {
+  content: url(./images/feature-card-1.png);
+}
+.features-section .wrapper article:nth-child(2) h3::before {
+  content: url(./images/feature-card-2.png);
+}
+.features-section .wrapper article:nth-child(3) h3::before {
+  content: url(./images/feature-card-3.png);
+}
+.features-section .wrapper article:nth-child(4) h3::before {
+  content: url(./images/feature-card-4.png);
+}
+.features-section .wrapper article:nth-child(5) h3::before {
+  content: url(./images/feature-card-5.png);
+}
+.features-section .wrapper article:nth-child(6) h3::before {
+  content: url(./images/feature-card-6.png);
+}
+.features-section .wrapper article p {
+  color: var(--color-gray);
+  opacity: 0.5;
+}
+.features-section .bubble-bottom {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(
+    224.72deg,
+    #3023ae -0.998%,
+    #c86dd7 100.505%
+  );
+  border-radius: 50%;
+  position: absolute;
+  right: 50%;
+  bottom: -100px;
+}
 .team-section {
   background-color: var(--color-blue);
   overflow: hidden;
@@ -155,7 +245,7 @@ ul {
   font-weight: 600;
   line-height: 24px;
 }
-.wrapper  {
+.wrapper {
   gap: 16px 30px;
 }
 .wrapper article {
@@ -356,7 +446,7 @@ ul {
   background-color: var(--color-purple);
 }
 @media (width < 1176px) {
-  .omnis-container{
+  .omnis-container {
     justify-content: center;
   }
   .omnis-content {
@@ -365,10 +455,10 @@ ul {
   }
 }
 @media (width < 899px) {
-  .team-container{
+  .team-container {
     justify-content: center;
   }
-  .team-content{
+  .team-content {
     flex-grow: 1;
   }
   .team-image img {
